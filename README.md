@@ -32,6 +32,7 @@ Start the server
 - Toast notification on form submission
 - Styling is done using TailwindCSS
 - Booking data with Approve/Reject/Delete functionality with status changes based on actions
+- Toast notification is triggered once the user click on delete button in booking table.
 
 ## Folder Structure & Components
 
