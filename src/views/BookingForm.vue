@@ -15,7 +15,7 @@
           <input
             type="text"
             required
-            v-model="form.personName"
+            v-model="form.name"
             class="border border-gray-300 rounded-md"
           />
         </div>
@@ -24,7 +24,7 @@
             >Meeting Room</label
           >
           <select
-            v-model="form.meetingRoom"
+            v-model="form.room"
             required
             class="border border-gray-300 rounded-md"
           >
@@ -100,6 +100,7 @@
 
 <script>
 import Button from "@/components/Button.vue";
+import bookings from "@/assets/bookingData";
 export default {
   name: "BookingForm",
   components: {
@@ -108,15 +109,17 @@ export default {
 
   data() {
     return {
+      bookings: bookings,
       // added for future usecase
       form: {
-        personName: "",
-        meetingRoom: "Select Room",
+        name: "",
+        room: "Select Room",
         date: "",
         startTime: "",
         endTime: "",
         peopleCount: 1,
         purpose: "",
+        status: "Pending",
       },
     };
   },
@@ -124,6 +127,7 @@ export default {
   methods: {
     sumbitHandler() {
       console.log(this.form);
+      bookings.push(this.form);
       this.$toast.success("Booking Confirmed");
       //! resetting the values after user sumbits
       this.form = {
@@ -134,6 +138,7 @@ export default {
         endTime: "",
         peopleCount: 1,
         purpose: "",
+        status: "Pending",
       };
     },
   },
