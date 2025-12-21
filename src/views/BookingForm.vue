@@ -131,14 +131,14 @@ export default {
       this.$toast.success("Booking Confirmed");
       //! resetting the values after user sumbits
       this.form = {
-        personName: "",
-        meetingRoom: "",
+        name: "",
+        room: "",
         date: "",
         startTime: "",
         endTime: "",
         peopleCount: 1,
         purpose: "",
-        status: "Pending",
+        // status: "Pending",
       };
     },
   },
