@@ -1,7 +1,6 @@
 <template>
   <div class="w-[85%] mt-12 mx-auto">
     <h2 class="text-xl font-semibold mb-4 text-[#002b6b]">My Bookings:</h2>
-
     <table class="booking-table">
       <thead>
         <tr class="bg-[#e6edf7] text-[#002b6b]">
@@ -16,6 +15,7 @@
       </thead>
 
       <tbody>
+        <div class="config-btn">Confirmation Btns</div>
         <tr v-for="booking in bookings" :key="booking.id">
           <td>{{ booking.name }}</td>
           <td>{{ booking.room }}</td>
@@ -88,6 +88,7 @@ export default {
     },
 
     deleteBooking(id) {
+      document.querySelector(".config-btn").style.display = "flex";
       this.bookings = this.bookings.filter((booking) => booking.id !== id);
       this.$toast.error("Deleted Successfully");
     },
@@ -104,6 +105,9 @@ export default {
 };
 </script>
 <style scoped>
+.config-btn {
+  display: none;
+}
 .booking-table {
   width: 100%;
   border-collapse: collapse;

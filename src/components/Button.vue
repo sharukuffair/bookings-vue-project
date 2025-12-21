@@ -9,7 +9,6 @@ export default {
   props: {
     extraClass: {
       type: String,
-      default: "",
     },
   },
 };
