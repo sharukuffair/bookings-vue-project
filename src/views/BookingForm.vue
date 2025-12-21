@@ -127,7 +127,7 @@ export default {
   methods: {
     sumbitHandler() {
       console.log(this.form);
-      bookings.push(this.form);
+      bookings.push({ ...this.form });
       this.$toast.success("Booking Confirmed");
       //! resetting the values after user sumbits
       this.form = {
