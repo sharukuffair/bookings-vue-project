@@ -15,7 +15,6 @@
       </thead>
 
       <tbody>
-        <div class="config-btn">Confirmation Btns</div>
         <tr v-for="booking in bookings" :key="booking.id">
           <td>{{ booking.name }}</td>
           <td>{{ booking.room }}</td>
@@ -88,7 +87,6 @@ export default {
     },
 
     deleteBooking(id) {
-      document.querySelector(".config-btn").style.display = "flex";
       this.bookings = this.bookings.filter((booking) => booking.id !== id);
       this.$toast.error("Deleted Successfully");
     },
