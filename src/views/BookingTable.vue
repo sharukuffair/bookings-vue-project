@@ -17,7 +17,7 @@
       <tbody class="relative">
         <!-- delete dailog box -->
         <div
-          class="w-[300px] h-[150px] border rounded-md absolute bg-gray-50 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+          class="w-[300px] h-[150px] origin-center border rounded-md absolute bg-gray-50 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
         >
           <div class="p-4">
             <div class="flex justify-between items-center">
