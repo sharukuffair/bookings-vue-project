@@ -28,11 +28,11 @@
               <p class="text-lg">Are you sure?</p>
               <div class="flex justify-evenly">
                 <span
-                  class="border border-green-800 rounded-md py-1 px-2 text-sm bg-green-600 text-white hover:bg-green-800 transition-all duration-300 cursor-pointer"
+                  class="border border-green-300 rounded-md py-1 px-2 text-sm bg-green-600 text-white hover:bg-green-800 transition-all duration-300 cursor-pointer"
                   >Yes <i class="fa-solid fa-check"></i
                 ></span>
                 <span
-                  class="border border-red-800 rounded-md py-1 px-2 text-sm bg-red-600 text-white hover:bg-red-800 transition-all duration-300 cursor-pointer"
+                  class="border border-red-300 rounded-md py-1 px-2 text-sm bg-red-600 text-white hover:bg-red-800 transition-all duration-300 cursor-pointer"
                   >No <i class="fa-solid fa-xmark"></i
                 ></span>
               </div>
