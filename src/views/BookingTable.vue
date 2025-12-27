@@ -16,17 +16,25 @@
 
       <tbody class="relative">
         <!-- delete dailog box -->
-        <div class="w-[300px] h-[150px] border absolute bg-red-200 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <div class="p-2">
+        <div
+          class="w-[300px] h-[150px] border rounded-md absolute bg-gray-50 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+        >
+          <div class="p-4">
             <div class="flex justify-between items-center">
-              <span>Delete Confirmation</span>
-              <i class="fa-solid fa-xmark"></i>
+              <span class="text-sm">Delete Confirmation</span>
+              <i class="fa-solid fa-xmark text-sm"></i>
             </div>
-            <div class="text-center mt-2">
-              <p>Are you sure?</p>
-              <div>
-                <span>Yes <i class="fa-solid fa-check"></i></span>
-                <span>No <i class="fa-solid fa-xmark"></i></span>
+            <div class="text-center mt-4 space-y-2">
+              <p class="text-lg">Are you sure?</p>
+              <div class="flex justify-evenly">
+                <span
+                  class="border border-green-800 rounded-md py-1 px-2 text-sm bg-green-600 text-white hover:bg-green-800 transition-all duration-300 cursor-pointer"
+                  >Yes <i class="fa-solid fa-check"></i
+                ></span>
+                <span
+                  class="border border-red-800 rounded-md py-1 px-2 text-sm bg-red-600 text-white hover:bg-red-800 transition-all duration-300 cursor-pointer"
+                  >No <i class="fa-solid fa-xmark"></i
+                ></span>
               </div>
             </div>
           </div>
