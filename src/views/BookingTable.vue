@@ -114,13 +114,16 @@ export default {
     deleteBooking(id) {
       // this.bookings = this.bookings.filter((booking) => booking.id !== id);
       // this.$toast.error("Deleted Successfully");
+      document.querySelector(".config-box").classList.remove("active");
+
       this.handleDelete(id);
     },
     handleDelete(id) {
-      document.querySelector(".config-box").classList.remove("active");
-      console.log("deleted");
+      console.log(id);
+      console.log(this.booking);
       this.bookings = this.bookings.filter((booking) => booking.id !== id);
-      this.$toast.error("Deleted Successfully");
+      // this.bookings = this.bookings.filter((booking) => booking.id !== id);
+      // this.$toast.error("Deleted Successfully");
       // document.querySelector(".config-box").classList.add("active");
     },
     statusClass(status) {
