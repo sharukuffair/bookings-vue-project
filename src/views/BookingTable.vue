@@ -14,7 +14,23 @@
         </tr>
       </thead>
 
-      <tbody>
+      <tbody class="relative">
+        <!-- delete dailog box -->
+        <div class="w-[300px] h-[150px] border absolute bg-red-200 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+          <div class="p-2">
+            <div class="flex justify-between items-center">
+              <span>Delete Confirmation</span>
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="text-center mt-2">
+              <p>Are you sure?</p>
+              <div>
+                <span>Yes <i class="fa-solid fa-check"></i></span>
+                <span>No <i class="fa-solid fa-xmark"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
         <tr v-for="booking in bookings" :key="booking.id">
           <td>{{ booking.name }}</td>
           <td>{{ booking.room }}</td>
