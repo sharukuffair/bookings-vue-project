@@ -34,12 +34,12 @@
               <div class="flex justify-evenly">
                 <span
                   @click="confirmDelete()"
-                  class="border-2 border-green-50 rounded-md py-1 px-2 text-sm bg-green-600 text-white hover:bg-green-800 transition-all duration-300 cursor-pointer"
+                  class="border-2 border-green-200 rounded-md py-1 px-2 text-sm bg-green-600 text-white hover:bg-green-800 transition-all duration-300 cursor-pointer"
                   >Yes <i class="fa-solid fa-check"></i
                 ></span>
                 <span
                   @click="cancelDelete()"
-                  class="border-2 border-red-50 rounded-md py-1 px-2 text-sm bg-red-600 text-white hover:bg-red-800 transition-all duration-300 cursor-pointer"
+                  class="border-2 border-red-200 rounded-md py-1 px-2 text-sm bg-red-600 text-white hover:bg-red-800 transition-all duration-300 cursor-pointer"
                   >No <i class="fa-solid fa-xmark"></i
                 ></span>
               </div>
