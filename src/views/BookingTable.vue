@@ -14,7 +14,38 @@
         </tr>
       </thead>
 
-      <tbody>
+      <tbody class="relative">
+        <!-- delete dailog box -->
+        <div
+          v-if="showDeleteDailog"
+          class="w-[300px] h-[150px] origin-center border rounded-md absolute bg-gray-50 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+        >
+          <div class="p-4">
+            <div class="flex justify-between items-center">
+              <span class="text-sm">Delete Confirmation</span>
+              <i
+                @click="cancelDelete()"
+                class="fa-solid fa-xmark text-sm cursor-pointer"
+              ></i>
+            </div>
+            <hr class="mt-1 border border-gray-200" />
+            <div class="text-center mt-4 space-y-2">
+              <p class="text-lg">Are you sure?</p>
+              <div class="flex justify-evenly">
+                <span
+                  @click="confirmDelete()"
+                  class="border border-green-600 rounded-md py-1 px-2 text-sm bg-green-400 text-white hover:bg-green-600 transition-all duration-300 cursor-pointer"
+                  >Yes <i class="fa-solid fa-check"></i
+                ></span>
+                <span
+                  @click="cancelDelete()"
+                  class="border border-red-600 rounded-md py-1 px-2 text-sm bg-red-400 text-white hover:bg-red-600 transition-all duration-300 cursor-pointer"
+                  >No <i class="fa-solid fa-xmark"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
         <tr v-for="booking in bookings" :key="booking.id">
           <td>{{ booking.name }}</td>
           <td>{{ booking.room }}</td>
@@ -45,7 +76,7 @@
               Reject
             </button>
             <button
-              @click="deleteBooking(booking.id)"
+              @click="openDeleteDailogBox(booking.id)"
               class="border rounded-md border-red-300 bg-red-100 text-sm py-1 px-2"
             >
               Delete
@@ -68,6 +99,8 @@ export default {
   data() {
     return {
       bookings: bookingData,
+      showDeleteDailog: false,
+      deleteID: null,
     };
   },
 
@@ -85,12 +118,20 @@ export default {
         booking.status = "Rejected";
       }
     },
-
-    deleteBooking(id) {
-      this.bookings = this.bookings.filter((booking) => booking.id !== id);
+    openDeleteDailogBox(id) {
+      (this.deleteID = id), (this.showDeleteDailog = true);
+    },
+    confirmDelete() {
+      this.bookings = this.bookings.filter(
+        (booking) => booking.id !== this.deleteID
+      );
+      this.deleteID = null;
+      this.showDeleteDailog = false;
       this.$toast.error("Deleted Successfully");
     },
-
+    cancelDelete() {
+      (this.deleteID = null), (this.showDeleteDailog = false);
+    },
     statusClass(status) {
       return {
         badge: true,
@@ -103,9 +144,6 @@ export default {
 };
 </script>
 <style scoped>
-.config-btn {
-  display: none;
-}
 .booking-table {
   width: 100%;
   border-collapse: collapse;
