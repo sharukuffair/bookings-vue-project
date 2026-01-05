@@ -95,7 +95,6 @@
 <script>
 import PageNavigation from "@/components/PageNavigation.vue";
 import bookingData from "../assets/bookingData";
-// import PageNavigation from "@/components/PageNavigation.vue";
 
 export default {
   name: "BookingTable",
