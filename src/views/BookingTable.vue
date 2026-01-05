@@ -1,5 +1,6 @@
 <template>
   <div class="w-[85%] mt-12 mx-auto">
+    <PageNavigation />
     <h2 class="text-xl font-semibold mb-4 text-[#002b6b]">My Bookings:</h2>
     <table class="booking-table">
       <thead>
@@ -92,7 +93,9 @@
 </template>
 
 <script>
+import PageNavigation from "@/components/PageNavigation.vue";
 import bookingData from "../assets/bookingData";
+// import PageNavigation from "@/components/PageNavigation.vue";
 
 export default {
   name: "BookingTable",
@@ -103,7 +106,9 @@ export default {
       deleteID: null,
     };
   },
-
+  components: {
+    PageNavigation,
+  },
   methods: {
     approveBooking(id) {
       const booking = this.bookings.find((booking) => booking.id === id);

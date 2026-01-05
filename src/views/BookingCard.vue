@@ -1,5 +1,6 @@
 <template>
   <div class="w-[85%] mx-auto mt-8 p-8">
+    <PageNavigation />
     <h2 class="text-md md:text-xl font-semibold mb-4 text-[#002b6b]">
       Current & Upcoming Meetings:
     </h2>
@@ -23,10 +24,12 @@
 <script>
 import events from "@/assets/eventsData";
 import Card from "@/components/Card.vue";
+import PageNavigation from "@/components/PageNavigation.vue";
 
 export default {
   components: {
     Card,
+    PageNavigation,
   },
   data() {
     return {
