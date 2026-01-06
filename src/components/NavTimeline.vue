@@ -45,23 +45,4 @@ export default {
 };
 </script>
 
-<style scoped>
-/* .breadcrumb {
-  margin-bottom: 16px;
-  font-size: 14px;
-}
-
-.link {
-  color: #2563eb;
-  cursor: pointer;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.active {
-  font-weight: 600;
-  color: #111;
-} */
-</style>
+<style scoped></style>
