@@ -4,7 +4,7 @@
       <span
         v-if="item.path !== $route.path"
         class="text-gray-500 cursor-pointer"
-        @click="goTo(item.path)"
+        @click="navHandler(item.path)"
       >
         {{ item.label }}
       </span>
@@ -38,7 +38,7 @@ export default {
     },
   },
   methods: {
-    goTo(path) {
+    navHandler(path) {
       this.$router.push(path);
     },
   },
