@@ -13,7 +13,9 @@
         {{ item.label }}
       </span>
 
-      <span v-if="index < linkList.length - 1"> {{ "<" }} </span>
+      <span v-if="index < linkList.length - 1" class="text-gray-500 text-xs">
+        <i class="fa-solid fa-angle-left"></i>
+      </span>
     </span>
   </nav>
 </template>
