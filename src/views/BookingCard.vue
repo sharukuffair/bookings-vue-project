@@ -1,5 +1,6 @@
 <template>
   <div class="w-[85%] mx-auto mt-8 p-8">
+    <NavTimeline extraClass="mt-[-50px] ml-[-40px]" />
     <PageNavigation />
     <h2 class="text-md md:text-xl font-semibold mb-4 text-[#002b6b]">
       Current & Upcoming Meetings:
@@ -25,11 +26,13 @@
 import events from "@/assets/eventsData";
 import Card from "@/components/Card.vue";
 import PageNavigation from "@/components/PageNavigation.vue";
+import NavTimeline from "@/components/NavTimeline.vue";
 
 export default {
   components: {
     Card,
     PageNavigation,
+    NavTimeline,
   },
   data() {
     return {

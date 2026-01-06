@@ -1,5 +1,6 @@
 <template>
   <div class="w-full h-full overflow-x-hidden">
+    <NavTimeline extraClass="ml-20 mt-4"/>
     <PageNavigation extra-class="ml-20 mt-12" />
     <div
       class="w-[60%] min-h-[50%] bg-[#fff] mx-auto rounded-md shadow-md py-8 px-24 mt-12 mb-12"
@@ -103,12 +104,14 @@
 import Button from "@/components/Button.vue";
 import bookings from "@/assets/bookingData";
 import PageNavigation from "@/components/PageNavigation.vue";
+import NavTimeline from "@/components/NavTimeline.vue";
 
 export default {
   name: "BookingForm",
   components: {
     Button,
     PageNavigation,
+    NavTimeline,
   },
 
   data() {

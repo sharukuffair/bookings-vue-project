@@ -1,5 +1,6 @@
 <template>
   <div class="w-[85%] mt-12 mx-auto">
+    <NavTimeline  extraClass="mt-[-40px]"/>
     <PageNavigation />
     <h2 class="text-xl font-semibold mb-4 text-[#002b6b]">My Bookings:</h2>
     <table class="booking-table">
@@ -95,9 +96,9 @@
 <script>
 import PageNavigation from "@/components/PageNavigation.vue";
 import bookingData from "../assets/bookingData";
+import NavTimeline from "@/components/NavTimeline.vue";
 
 export default {
-  name: "BookingTable",
   data() {
     return {
       bookings: bookingData,
@@ -107,6 +108,7 @@ export default {
   },
   components: {
     PageNavigation,
+    NavTimeline,
   },
   methods: {
     approveBooking(id) {
