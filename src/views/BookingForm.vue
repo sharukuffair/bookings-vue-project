@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full">
+  <div class="w-full h-full overflow-x-hidden">
     <PageNavigation extra-class="ml-20 mt-12" />
     <div
       class="w-[60%] min-h-[50%] bg-[#fff] mx-auto rounded-md shadow-md py-8 px-24 mt-12 mb-12"
